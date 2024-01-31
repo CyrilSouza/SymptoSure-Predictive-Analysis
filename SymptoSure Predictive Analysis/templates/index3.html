@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Disease Predictor</title>
+</head>
+
+<body>
+    <h2>Disease Predictor</h2>
+    <form id="symptom-form" method="POST" action="/predict">
+        <label>Symptom 1:</label>
+        <input type="text" name="symptom1" required><br>
+        <label>Symptom 2:</label>
+        <input type="text" name="symptom2" required><br>
+        <label>Symptom 3:</label>
+        <input type="text" name="symptom3" required><br>
+        <button type="submit">Predict</button>
+    </form>
+
+    <div id="result">
+        {% if prediction %}
+            <h3>Prediction:</h3>
+            <p>{{ prediction }}</p>
+        {% endif %}
+    </div>
+
+</body>
+</html>
